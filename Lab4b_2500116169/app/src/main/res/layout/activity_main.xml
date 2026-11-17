@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout 
+ xmlns:android="http://schemas.android.com/apk/res/android"
+ xmlns:app="http://schemas.android.com/apk/res-auto"
+ xmlns:tools="http://schemas.android.com/tools"
+ android:layout_width="match_parent"
+ android:layout_height="match_parent"
+ android:padding="24dp"
+ tools:context=".MainActivity">
+ <TextView
+ android:id="@+id/tvCountdown"
+ android:layout_width="wrap_content"
+ android:layout_height="wrap_content"
+ android:text="Thời gian: 60 s"
+ android:textSize="24sp"
+ android:textStyle="bold"
+ app:layout_constraintTop_toTopOf="parent"
+ app:layout_constraintStart_toStartOf="parent"
+ app:layout_constraintEnd_toEndOf="parent"
+ android:layout_marginTop="32dp"/>
+ <ProgressBar
+ android:id="@+id/progressBar"
+ android:layout_width="wrap_content"
+ android:layout_height="wrap_content"
+ android:layout_marginTop="32dp"
+ app:layout_constraintTop_toBottomOf="@id/tvCountdown"
+ app:layout_constraintStart_toStartOf="parent"
+ app:layout_constraintEnd_toEndOf="parent" />
+ <Button
+ android:id="@+id/btnBlockThread"
+ android:layout_width="match_parent"
+ android:layout_height="wrap_content"
+ android:text="Chạy tác vụ nặng chặn luồng (Gây lỗi ANR)"
+ android:backgroundTint="#D32F2F"
+ app:layout_constraintTop_toBottomOf="@id/progressBar"
+ android:layout_marginTop="48dp"/>
+ <Button
+ android:id="@+id/btnRunCoroutine"
+ android:layout_width="match_parent"
+ android:layout_height="wrap_content"
+ android:text="Chạy tác vụ với Coroutines (Mượt mà)"
+ android:backgroundTint="#388E3C"
+ app:layout_constraintTop_toBottomOf="@id/btnBlockThread"
+ android:layout_marginTop="16dp"/>
+ <TextView
+ android:id="@+id/tvStatus"
+ android:layout_width="match_parent"
+ android:layout_height="wrap_content"
+ android:text="Trạng thái: Sẵn sàng"
+ android:textSize="16sp"
+ android:textAlignment="center"
+ app:layout_constraintTop_toBottomOf="@id/btnRunCoroutine"
+ android:layout_marginTop="32dp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
